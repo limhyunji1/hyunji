@@ -1,0 +1,4 @@
+@charset "utf-8";
+body { background: #ffb8a9; overflow: hidden; }
+
+#fixed .logo a { display: block; width: 107px; height: 101px; background-image: url("../images/main/logo2.png"); background-size: 107px 101px; }
