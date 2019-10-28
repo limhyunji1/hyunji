@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title> CoDingHyunDing - about me </title>
+  <title> CoDingHyunDing - project </title>
+  <link rel="stylesheet" href="css/fullpage.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/aboutme.css">
 
@@ -18,8 +19,34 @@
     <script type="text/javascript" src="js/html5shiv.min.js"></script>
   <![endif]-->
   <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/fullpage.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/aboutme.js"></script>
+  <script>
+      $(document).ready(function () {
+        $(window).on('load resize', function () {
+        var marTop = 3884 - $(window).height();   //svg이미지 높이 3884
+        $('#svgLine svg').stop().animate({marginTop: -marTop}, 50000);
+      });
+      
+      
+      var colorChange = [['#E25405', '#FF7217'], ['#039e07', '#19d51d'], ['#1957d5', '#548cff']];
+      $('#snb ul li a').on('click', function (e) {
+        e.preventDefault();
+        var tgIdx = $(this).parent().index();
+        console.log(tgIdx, colorChange[tgIdx][0], colorChange[tgIdx][1])
+        $('.dark').css({fill: colorChange[tgIdx][0],stroke:colorChange[tgIdx][0]});
+        $('.white').css({fill: colorChange[tgIdx][1],stroke:colorChange[tgIdx][1]});
+      });
+        $('#fullpage').fullpage({
+          navigationPosition: 'left',
+          navigation: true,
+          navigationTooltips: ['L', 'E', 'P', 'L'], //인디케이터옆 설명 텍스트
+        });
+      });
+    </script>
+  
 </head>
 
 <body>
@@ -29,40 +56,109 @@
     <!-- // 마우스커서 -->
 
     <div id="fixed">
-        <div class="logo p_f m">
+      <div class="logo p_f m">
         <a href="index.html"><h1 class="blind">HYUN'S PORTFOLIO</h1></a>
       </div>
+      <div class="scroll">
+        <div class="scroll-screen"></div>
+        <div class="mouse_scroll">
+            <div>
+                <span class="scroll_arrows fir"></span>
+                <span class="scroll_arrows sec"></span>
+            </div>
+        </div>
     </div>
+    </div>
+    <div id="svgLine">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 433 3884" style="enable-background:new 30% 0 433 3884;" xml:space="preserve">
+          <g id="dark">
+            <polygon class="dark" points="67.5,87.5 122.5,73.5 325.5,181.5 260.5,186.5 	"/>
+            <polygon class="dark" points="171.5,230.5 151.5,268.5 185.5,284.5 215.5,226.5 	"/>
+            <polygon class="dark" points="271.5,366.5 72.5,422.5 144.5,440.5 321.5,389.5 	"/>
+            <polygon class="dark" points="304.5,519.5 97.5,627.5 171.5,630.5 358.5,532.5 	"/>
+            <polygon class="dark" points="211.5,670.5 242.5,726.5 274.5,711.5 256.5,674.5 	"/>
+            <polygon class="dark" points="102.5,831.5 292.5,911.5 341.5,893.5 146.5,811.5 	"/>
+            <polygon class="dark" points="69.5,1037.5 272.5,1118.5 311.5,1096.5 119.5,1018.5 	"/>
+            <polygon class="dark" points="144.5,1235.5 165.5,1273.5 211.5,1280.5 177.5,1217.5 	"/>
+            <polygon class="dark" points="59.5,1432.5 111.5,1445.5 317.5,1330.5 247.5,1325.5 	"/>
+            <polygon class="dark" points="271.5,1520.5 91.5,1572.5 137.5,1595.5 343.5,1538.5 	"/>
+            <polygon class="dark" points="233.5,1685.5 196.5,1743.5 241.5,1740.5 263.5,1700.5 	"/>
+            <polygon class="dark" points="88.5,1789.5 296.5,1916.5 340.5,1900.5 148.5,1784.5 	"/>
+            <polygon class="dark" points="63.5,2038.5 269.5,2120.5 307.5,2099.5 113.5,2019.5 	"/>
+            <polygon class="dark" points="138.5,2236.5 159.5,2271.5 203.5,2274.5 171.5,2217.5 	"/>
+            <polygon class="dark" points="245.5,2311.5 57.5,2422.5 105.5,2436.5 311.5,2315.5 	"/>
+            <polygon class="dark" points="274.5,2520.5 88.5,2581.5 131.5,2604.5 338.5,2538.5 	"/>
+            <polygon class="dark" points="227.5,2694.5 190.5,2757.5 237.5,2749.5 259.5,2712.5 	"/>
+            <polygon class="dark" points="85.5,2803.5 283.5,2927.5 331.5,2915.5 144.5,2796.5 	"/>
+            <polygon class="dark" points="50.5,3014.5 248.5,3063.5 301.5,3040.5 130.5,2996.5 	"/>
+            <polygon class="dark" points="125.5,3150.5 156.5,3194.5 201.5,3197.5 157.5,3135.5 	"/>
+            <polygon class="dark" points="249.5,3234.5 63.5,3354.5 107.5,3369.5 306.5,3237.5 	"/>
+            <polygon class="dark" points="285.5,3469.5 94.5,3541.5 137.5,3564.5 338.5,3487.5 	"/>
+            <polygon class="dark" points="233.5,3657.5 197.5,3720.5 244.5,3712.5 264.5,3675.5 	"/>
+            <polygon class="dark" points="91.5,3767.5 270.5,3884.5 337.5,3884.5 147.5,3760.5 	"/>
+          </g>
+          <g id="white">
+            <polygon class="white" points="262.5,0.5 71.5,48.5 67.5,87.5 351.5,16.5 351.5,0.5 	"/>
+            <polygon class="white" points="326.5,181.5 234.5,188.5 171.5,230.5 318.5,218.5 	"/>
+            <polygon class="white" points="151.5,268.5 166.5,316.5 322.5,389.5 325.5,349.5 	"/>
+            <polygon class="white" points="70.5,422.5 72.5,462.5 358.5,532.5 354.5,493.5 	"/>
+            <polygon class="white" points="96.5,627.5 105.5,662.5 256.5,674.5 190.5,631.5 	"/>
+            <polygon class="white" points="274.5,711.5 258.5,759.5 102.5,831.5 99.5,792.5 	"/>
+            <polygon class="white" points="342.5,893.5 69.5,994.5 69.5,1037.5 341.5,932.5 	"/>
+            <polygon class="white" points="311.5,1096.5 158.5,1184.5 144.5,1235.5 315.5,1136.5 	"/>
+            <polygon class="white" points="165.5,1273.5 234.5,1324.5 318.5,1330.5 309.5,1295.5 	"/>
+            <polygon class="white" points="59.5,1432.5 64.5,1470.5 344.5,1538.5 343.5,1501.5 	"/>
+            <polygon class="white" points="91.5,1572.5 88.5,1611.5 263.5,1700.5 252.5,1653.5 	"/>
+            <polygon class="white" points="241.5,1740.5 97.5,1751.5 87.5,1789.5 175.5,1782.5 	"/>
+            <polygon class="white" points="340.5,1900.5 66.5,1999.5 63.5,2038.5 334.5,1937.5 	"/>
+            <polygon class="white" points="307.5,2099.5 153.5,2186.5 138.5,2236.5 309.5,2138.5 	"/>
+            <polygon class="white" points="159.5,2271.5 224.5,2310.5 312.5,2315.5 302.5,2277.5 	"/>
+            <polygon class="white" points="57.5,2422.5 62.5,2460.5 339.5,2538.5 338.5,2501.5 	"/>
+            <polygon class="white" points="88.5,2581.5 84.5,2622.5 259.5,2712.5 244.5,2663.5 	"/>
+            <polygon class="white" points="236.5,2749.5 93.5,2764.5 84.5,2803.5 169.5,2793.5 	"/>
+            <polygon class="white" points="329.5,2915.5 48.5,2976.5 48.5,3014.5 326.5,2953.5 	"/>
+            <polygon class="white" points="302.5,3040.5 139.5,3107.5 125.5,3150.5 306.5,3077.5 	"/>
+            <polygon class="white" points="157.5,3194.5 299.5,3199.5 306.5,3237.5 221.5,3232.5 	"/>
+            <polygon class="white" points="63.5,3354.5 338.5,3448.5 339.5,3487.5 67.5,3394.5 	"/>
+            <polygon class="white" points="94.5,3541.5 91.5,3581.5 264.5,3674.5 251.5,3625.5 	"/>
+            <polygon class="white" points="242.5,3713.5 100.5,3729.5 91.5,3767.5 174.5,3757.5 	"/>
+          </g>
+        </svg>
+      </div>
 
     <div id="wrap">
-      <div class="project"><a href="project.html"><h2>MY PROJECT</h2></a></div>
-      <ul class="project_list">
-        <li class="list1"><a href="daldalhae.html">DALDALHAE<div class="arrow"></div></a></li>
-        <li class="list2"><a href="mega.html">MEBABOX<div class="arrow"></div></a></li>
-        <li class="list3"><a href="http://lake0989.dothome.co.kr/" target="_blank">DOTHOME<div class="arrow"></div></a></li>
-        <li class="list4"><a href="#">SINABRO<div class="arrow"></div></a></li>
-        <div class="project_list_1 bg onMouse"></div>
-      <div class="project_list_2 bg onMouse"></div>
-      <div class="project_list_3 bg onMouse"></div>
-      <div class="project_list_4 bg onMouse"></div>
-      </ul>
+        
+        <div id="fullpage">
+            <div class="section name">
+              <div class="txt_area">
+                <h2>Lim hyun ji</h2>
+                <p>임 현지<br>1996년 3월생 (24세)</p>
+              </div>
+            </div>
 
-      
+            <div class="section edu">
+              <div class="txt_area">
+                <h2>Education</h2>
+                <p>한양여자대학교<br>정보경영[스마트IT]과 졸업 (2019.02)</p>
+              </div>
+            </div>
 
+            <div class="section personality">
+              <div class="txt_area">
+                <h2>Personality</h2>
+                <p>Passionate &amp; Brightness<br>Agreeableness &amp; Conscientiousness<br>Responsible &amp; Meticulousness</p>
+              </div>
+            </div>
+            
+            <div class="section Like">
+              <div class="txt_area">
+                <h2>Like</h2>
+                <p>Coding / Drawing picture / Listening music<br>Watching movie / Playing game</p>
+
+              </div>
+            </div>
+        </div>
     </div>
-    <footer id="footer">
-      <ul class="sns_list clearfix">
-        <li class="sns1"><a href="https://github.com/limhyunji1/hy" target="_blank"></a></li>
-        <li class="sns2"><a href="https://codepen.io/hyunjizzang" target="_blank"></a></li>
-        <li class="sns3"><a href="index.html" target="_blank"></a></li>
-        <li class="sns4"><a href="https://lake0989.tistory.com/" target="_blank"></a></li>
-        <li class="sns5"><a href="http://lake0989.dothome.co.kr/" target="_blank"></a></li>
-      </ul>
-      <address>lake0989@naver.com</address>
-      <p>HYUNJI’S PORTFOLIO 2019</p>
-    </footer>
-
-
     
 </body>
 

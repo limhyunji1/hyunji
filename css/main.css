@@ -141,8 +141,19 @@ body { background: #1d0242; }
 /* section main */
 .section.hide { display: none; }
 
+.text_intro h2 { overflow: hidden; border-right: .05em solid #ffe0da; white-space: nowrap; letter-spacing: .08em; animation:  typing 2.5s steps(14, end), blink .8s step-end infinite; }
+@keyframes typing {
+    from { width: 0 }
+    to { width: 60% }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #ffe0da }
+}
+
 h2 { z-index: 1; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: hanna; font-size: 13.13vw; color: #ffc0b3; transition: all .3s ease; }
-h2:hover, .section.main h2:focus { color: #1d0242; text-shadow: 2px  2px 0  #ffb8a9, -1.5px -2px 0 #ffb8a9, 2px -2px 0 #ffb8a9, -1.5px 2px 0 #ffb8a9, 2px  2px 0 #ffb8a9; }
+h2:hover, .section.main h2:focus { color: #1d0242; text-shadow: 2px 2px #ffb8a9, -1.5px -2px 0 #ffb8a9, 2px -2px 0 #ffb8a9, -1.5px 2px 0 #ffb8a9, 2px  2px 0 #ffb8a9; }
 
 h3.text_anime { text-align: center; font-family: ScoreD; font-weight: 300; font-size: 2.188vw; color: #f4876e; }
 
@@ -164,6 +175,10 @@ h3.text_anime { text-align: center; font-family: ScoreD; font-weight: 300; font-
    80% { opacity: 0; height:2.5em; }
    100% { opacity: 0; }
 }
+
+/* bg_container */
+.section .bg_container { display: none; }
+.section.active .bg_container { display: block; }
 
 /* section about */
 .section h2 { white-space: nowrap; text-shadow: 2px 2px 0 #1d0242, -1.5px -2px 0 #1d0242, 2px -2px 0 #1d0242, -1.5px 2px 0 #1d0242, 2px 2px 0 #1d0242; }
@@ -193,7 +208,7 @@ h3.text_anime { text-align: center; font-family: ScoreD; font-weight: 300; font-
 
 
 /* section skills */
-.section.skills .bg_container .bg1 { position: absolute; left: 20%; width: 461px; height: 461px; background-image: url("../images/main/skills.jpg"); background-size: 589px 459px; top: -55%; }
+.section.skills .bg_container .bg1 { position: absolute; left: 20%; width: 461px; height: 461px; background-image: url("../images/main/skills.jpg"); background-size: contain; background-repeat: no-repeat; top: -55%; }
 
 .section.skills .bg_container .bg2 { position: absolute; left: 55%; width: 479px; height: 648px; background-image: url("../images/main/skills2.jpg"); background-size: 449px 608px; top: -80%; }
 

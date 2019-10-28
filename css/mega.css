@@ -7,7 +7,7 @@ body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #1d0
 #wrap {  }
 
 /* header */
-.project { margin-top: 100px; text-align: center; font-family: hanna; font-size: 1.25rem; letter-spacing: 1px; }
+.project { margin-top: 6.5%; text-align: center; font-family: hanna; font-size: 1.25vw; letter-spacing: 1px; }
 .project a { position: relative; transition: all .2s ease; }
 .project a:after { transition: all .2s ease; content:""; display: block; width: 10px; height: 10px; border-bottom: 6px solid #1d0242; border-left: 6px solid #1d0242; -webkit-transform: rotate(45deg); transform: rotate(45deg); position: absolute; top: 8px; right: 120px; margin-top:-7px; }
 .project a.mHover:after { border-bottom: 6px solid #29a3a4; border-left: 6px solid #29a3a4; }
@@ -15,11 +15,10 @@ body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #1d0
 
 /* content */
 #content { position: relative; width: 100%; }
-.mega_side { padding: 110px 0 0 40px; }
-.bgImg { animation: floatImg 7s infinite; position: absolute; top: -60px; right: -70px;}
-.bgImg img { width: 34vw; }
+.mega_side { width: 17vw; height: 17vh; padding: 5% 0 0 2%; }
+.mega_side img { width: 100%; }
 
-.name { position: absolute;  animation: floatTxt 5s infinite; -moz-animation: floatTxt 5s infinite; -webkit-animation: floatTxt 5s infinite; -o-animation: floatTxt 5s infinite; -webkit-animation-direction: alternate; animation-direction: alternate; font-family: hanna; font-size: 21.88rem; width: 100%; height: 150px; left: 375px; top: 0; margin-top: 200px; }
+.name { position: absolute;  animation: floatTxt 5s infinite; -moz-animation: floatTxt 5s infinite; -webkit-animation: floatTxt 5s infinite; -o-animation: floatTxt 5s infinite; -webkit-animation-direction: alternate; animation-direction: alternate; font-family: hanna; font-size: 18.88vw; width: 100%; left: 21.5%; top: 10.8%; }
 
 @keyframes floatTxt {
     0% {
@@ -59,7 +58,7 @@ body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #1d0
 	}
 }
 
-.txt { margin: 120px 0 0 540px; font-size: 1.3vw; }
+.txt { margin: 17% 0 0 30%; font-size: 1.3vw; }
 .txt strong { font-size: 1.6vw; font-weight: 500; }
 .txt p, .txt a { font-weight: 300; }
 
@@ -129,13 +128,15 @@ body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #1d0
 
 /* chap1 */
 #chap1 { position: relative; margin-top: 12%; padding-bottom: 20%; width: 100%; }
-.chap_txt { width: 100%; font-size: 1rem; font-weight: 400; }
+.chap_txt { transition: all .5s ease-in-out; margin-left: -700px; width: 100%; font-size: 1rem; font-weight: 400; }
+.chap_txt.on { margin-left: 0; }
 .chap_txt h4 { position: relative; letter-spacing: 5px; font-family: hanna; font-size: 7.4vw; }
 .chap_txt h4:after { content: ""; position: absolute; left: 17%; bottom: 10%; width: 2.8%; height: 16.3%; border-radius: 50%; background: #29a3a4;}
 .chap_1 p { padding: 10% 0; font-size: 1.1vw; word-break: keep-all; line-height: 43px; }
 
 
-.txt_box1 { margin: 4% 0 0 10%; width: 50%; }
+.txt_box1 { transition: all .3s ease-in-out; opacity: 0; margin: 4% 0 0 10%; width: 50%; }
+.txt_box1.on { opacity: 1; }
 
 /* 모바일스크롤 */
 .hoverMe { font-family: hanna; position: absolute; top: 30%; left: -32%; font-size: 1.7vw; -ms-transform: rotate(270deg); transform: rotate(270deg); transform-origin: center top;}
@@ -190,13 +191,15 @@ body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #1d0
     }
 }
 
-.mobile { position: absolute; left: 63%; top: 5%; width: 25vw; }
+.mobile { transition: all .5s ease-in-out; position: absolute; left: 163%; top: 5%; width: 25vw; }
+.mobile.on { left: 63%; }
+
 .mobile img { width: 100%; }
 .phone { position: absolute; left: 0%; top: 0; width: 100%; height: 100%; }
 .image { position: absolute; left: 6.5%; top: 13.4%;
     background-image: url("../images/P_mega/m_img1.png");
     width: 86.8%; height: 73.24%;
-    transition:10s ease-in; background-size:cover;
+    transition: 10s ease-in; background-size:cover;
     background-position:top; }
 .image:hover {background-position:bottom;}
 /* .mobile img { width: 100%; } */
@@ -220,6 +223,9 @@ body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #1d0
 #footer address { padding-top: 80px; font-weight: 400; }
 #footer p { padding-top: 20px; font-weight: 600; }
 
+/* TOP 버튼 */
+a.btn_top { transition: .2s ease; opacity: 0; position: fixed; right: 2%; bottom: 3%; display: block; width: 5vw; height: 5vw; background: #1d0242; border-radius: 50%; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); line-height: 5vw; text-align: center; font-family: ScoreD; font-weight: 500; color: #29a3a4; font-size: 1vw; }
+.btn_top.view { opacity: 1; }
 
 /* 미디어쿼리 */
 @media all and (max-width: 1430px) {

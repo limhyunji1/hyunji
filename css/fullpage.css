@@ -103,11 +103,8 @@ html.fp-enabled,
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
 }
-#fp-nav.fp-right {
-    right: 17px;
-}
 #fp-nav.fp-left {
-    left: 17px;
+    left: 23%; top: 51%;
 }
 .fp-slidesNav{
     position: absolute;

@@ -31,7 +31,25 @@ $(document).ready(function (){
         var scrollT = $(this).scrollTop();
         var move = (-400/$(window).height())*scrollT
         $('#mega_moveImg .moveImg').css('transform', 'translateY('+move+'px)');
-    });
+        if (scrollT > 500) $('.btn_top').addClass('view');
+        else $('.btn_top').removeClass('view');
 
-    
+        var chap1Pos = $('#chap1 .chap_txt').offset().top - 600;
+         if (scrollT > chap1Pos) $('#chap1 .chap_txt').addClass('on');
+         else $('#chap1 .chap_txt').removeClass('on');
+
+        var chap1txtPos = $('#chap1 .txt_box1').offset().top - 600;
+         if (scrollT > chap1txtPos) $('#chap1 .txt_box1').addClass('on');
+         else $('#chap1 .txt_box1').removeClass('on');
+
+        var mobilePos = $('#chap1 .txt_box1').offset().top - 600;
+         if (scrollT > mobilePos) $('#chap1 .mobile').addClass('on');
+         else $('#chap1 .mobile').removeClass('on');
+
+
+    });
+    $('.btn_top').on('click', function () {
+        $('html, body').stop().animate({scrollTop: 0});
+        return false;
+    });
 });

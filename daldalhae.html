@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title> CoDingHyunDing - daldalhae </title>
+  <link href="css/prism.css" rel="stylesheet">
+	<!-- Prettify -->
+	<link href="css/prettify.css" rel="stylesheet">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/daldalhae.css">
 
@@ -20,6 +23,8 @@
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/daldalhae.js"></script>
+  <script src="js/prism.js"></script>
+  <script src="js/prettify.js"></script>
 </head>
 
 <body>
@@ -110,6 +115,59 @@
                 <div><span>#373737</span></div>
               </div>
             </div>
+            <div id="chap4">
+              <div class="chap_1">
+                <div class="chap_txt">
+                  <span>chapter - 4</span>
+                  <h4>coding</h4>
+                </div>
+                <div class="img_box"><img src="images/P_daldalhae/daldal.gif" alt=""></div>
+                <div class="txt_box5">
+                  <p>PC에서 가장 중요한 부분인 케이크 배너 영역은 마우스가 왼쪽으로 갔을 때 성분분석을 알 수 있는 페이지답게<br>좌측 케이크의 이미지가 100%로 영역이 커지며 반대로 마우스가 우측으로 이동하면<br>맛집추천의 케이크부분이 100%로 커지게 됩니다.</p>
+                </div>
+                <h5>CSS CODE</h5>
+                <pre><code class="language-css line-numbers">!CSS 부분!
+#visual {position: relative; width: 100%; height: 750px; margin-bottom: 95px; }
+#visual > div {position: absolute; top: 0; width: 50%; height: 100%; overflow: hidden;}
+#visual > div, #visual div .bg, #visual div .txt {position: absolute;}
+#visual .left, #visual .left .bg {left: 0;}
+#visual .right, #visual .right .bg {right: 0;}          
+#visual div .bg {width: 100vw; height: 100%; background: no-repeat center; background-size: cover}
+#visual .left .bg {background-image: url("../pc_images/Ingredient_analysis.jpg");}
+#visual .right .bg {background-image: url("../pc_images/recommend_restarant.jpg") background-position: 0 2px; }
+#visual div .txt {text-align: center; top: 50%;}
+#visual div .txt p {font-size: 18px; writing-mode: vertical-rl; text-orientation: mixed;font-weight: 600; }
+#visual div .txt p span {font-size: 28px; font-weight: bold; line-height: 70px; letter-spacing6px;}
+#visual .left .txt {left: 30px; height: 245px; margin-top: -122.5px;}
+#visual .right .txt {right: 30px; height: 208px; margin-top: -104px;}</code></pre>
+                <h5>SCRIPT CODE</h5>                
+                <pre><code class="language-css line-numbers">!JS 부분!
+//visual
+$("#visual > div").on('mouseenter', function () {
+$(this).stop().animate({width: '92%'}, 800, 'easeInOutCirc').siblings().stop().animate{width: '8%'}, 800, 'easeInOutCirc');
+});
+$("#visual").on('mouseleave', function () {
+$(this).children().stop().animate({width: '50%'});
+});
+//content
+$(window).on('scroll', function() {
+var scrollT = $(this).scrollTop();
+var move = (100/$(window).height())*scrollT
+$('#content1 .cnt_wrap').css('transform', 'translateY('+move+'px)');
+var imgPos = $('#content2 .images').offset().top - 400;
+if (scrollT > imgPos) $('#content2 .images').addClass('on');
+else $('#content2 .images').removeClass('on');
+//var scrollT = $(this).scrollTop();
+var move2 = (100/$(window).height())*scrollT
+$('#content4 .cnt_wrap').css('transform', 'translateY('+move2+'px)');
+//console.log(move2);
+//#con3 스크롤 이벤트에 추가
+var con3Pos = $('#content3 #con3').offset().top - 400;
+if (scrollT > con3Pos) $('#content3 #con3 .txt').addClass('on');
+else $('#content3 #con3 .txt').removeClass('on');
+});</code></pre>
+              </div>
+            </div>
         </section>
     </div>
     <footer id="footer">
@@ -123,6 +181,7 @@
         <address>lake0989@naver.com</address>
         <p>HYUNJI’S PORTFOLIO 2019</p>
     </footer>
+    <a href="#" class="btn_top">TOP</a>
 </body>
 
 </html>

@@ -48,6 +48,34 @@ $(document).ready(function (){
             $('#gif').addClass('fade');
             $('#gif').css('top', gifCssPos + (scrollT - gifPos) * 0.8 + 200);
             //console.log('목업위치 : ' + mockOffTop + ', 목업높이 : ' + mockHei + ', 스크롤바 : ' + scrollT +  ', 추가될 좌표 : '+ (scrollT - gifPos) * 0.8);
-        } 
+        }
+        /* TOP 버튼 */
+        if (scrollT > 500) $('.btn_top').addClass('view');
+        else $('.btn_top').removeClass('view');
+
+        
+ 
+         //스크롤 이벤트
+         var txtPos = $('#chap2 .txt_box3').offset().top - 600;
+         if (scrollT > txtPos) $('#chap2 .txt_box3').addClass('on');
+         else $('#chap2 .txt_box3').removeClass('on');
+
+         var bgPos = $('#chap2 .bg').offset().top - 600;
+         if (scrollT > bgPos) $('#chap2 .bg').addClass('on');
+         else $('#chap2 .bg').removeClass('on');
+
+         var chap3Pos = $('#chap3').offset().top - 600;
+         if (scrollT > chap3Pos) $('#chap3 .txt_box4').addClass('on');
+         else $('#chap3 .txt_box4').removeClass('on');
+
+         var boxPos = $('#chap3 .txt_box4').offset().top - 400;
+         if (scrollT > boxPos) $('#chap3 .color_box').addClass('on');
+         else $('#chap3 .color_box').removeClass('on');
+    });
+
+
+    $('.btn_top').on('click', function () {
+        $('html, body').stop().animate({scrollTop: 0});
+        return false;
     });
 });

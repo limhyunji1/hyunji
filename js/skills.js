@@ -13,21 +13,25 @@ $(document).ready(function (){
 
     $("#visual .left").on('mouseenter', function () {
         $('#visual .pub h3').addClass("pub_over");
+        $('.fix_txt').addClass("dn2");
         $('.des_circle .circle h4').addClass("dn2");
         
     });
     $("#visual .left").on('mouseleave', function () {
         $('#visual .pub h3').removeClass("pub_over");
+        $('.fix_txt').removeClass("dn2");
         $('.des_circle .circle h4').removeClass("dn2");
     });
 
     
     $("#visual .right").on('mouseenter', function () {
         $('#visual .des h3').addClass("des_over");
+        $('.fix_txt').addClass("dn");
         $('.pub_circle .circle h4').addClass("dn");
     });
     $("#visual .right").on('mouseleave', function () {
         $('#visual .des h3').removeClass("des_over");
+        $('.fix_txt').removeClass("dn");
         $('.pub_circle .circle h4').removeClass("dn");
     });
 

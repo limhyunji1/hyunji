@@ -77,6 +77,11 @@ button { background: none; border: none; cursor: none; }
 .blind { font-size: 0; width: 1px; height: 1px; left: -9999px; text-indent: -9999px; }
 .p_f { position: fixed; z-index: 1; }
 
+::selection {
+    background-color: none;
+    color: #fff;
+}
+
 /* 마우스커서 */
 body { cursor: none; }
 .cursor { position: absolute; margin-left: 12px; margin-top: 12px; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #fff; width: 6px; height: 6px; border-radius: 100%; z-index: 10000; transform: scale(1); user-select: none; pointer-events: none; }

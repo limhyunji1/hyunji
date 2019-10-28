@@ -3,6 +3,27 @@ body { background: #ffb8a9; overflow: hidden; }
 
 #fixed .logo a { display: block; width: 107px; height: 101px; background-image: url("../images/main/logo2.png"); background-size: 107px 101px; }
 
+.fix_txt { opacity: 1; transition: all .3s ease; position: fixed; left: 50%; top: 10%; z-index: 1000; transform: translate(-50%,0%); }
+.fix_txt h2 { background-image: url("../images/skills/txt_bg.jpg"); background-position: center; background-repeat: repeat-x; -webkit-background-clip: text; -ms-background-clip: text; background-clip: text; color: rgba(255,255,255,0); font-family: hanna; font-size: 3vw; animation: animate 25s linear infinite; }
+/* IE6,7,9,10 */
+ /* IE10+ */
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .fix_txt h2 { background-image: none; background: no-clip; color: #1d0242; }
+  .fix_txt h2 span { color: #ffb8a9;}
+ }
+
+@keyframes animate {
+  0% {
+    background-position: left 0px top 0px;
+  }
+  40% {
+    background-position: left 800px top 0px;
+  }
+  100% {
+    background-position: left 0px top 0px;
+  }
+}
+.fix_txt h2 span {  }
 #visual { position: relative; width: 100vw; height: 100vh; }
 #visual > div {position: absolute; top: 0; width: 50vw; height: 100vh; overflow: hidden; }
 
@@ -14,7 +35,7 @@ body { background: #ffb8a9; overflow: hidden; }
 #visual .left .bg { background: #ffb8a9; }
 #visual .right .bg {background: #1d0242; }
 
-#visual img { position: absolute; top: 50%; transform: translate(0,-50%); width: 100%; }
+#visual img { position: absolute; top: 53%; transform: translate(0,-50%); width: 100%; }
 #visual .left img { left: 0; }
 #visual .right img { right: 0; }
 
