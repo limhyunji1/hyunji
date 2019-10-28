@@ -56,6 +56,10 @@ $(document).ready(function (){
         
  
          //스크롤 이벤트
+         var logoPos = $('.txt').offset().top - 600;
+         if (scrollT > logoPos) $('.logo a').addClass('on');
+         else $('.logo a').removeClass('on');
+
          var txtPos = $('#chap2 .txt_box3').offset().top - 600;
          if (scrollT > txtPos) $('#chap2 .txt_box3').addClass('on');
          else $('#chap2 .txt_box3').removeClass('on');

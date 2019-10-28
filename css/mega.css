@@ -2,7 +2,8 @@
 
 body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #1d0242; }
 
-#fixed .logo a { display: block; width: 107px; height: 101px; background-image: url("../images/main/logo2.png"); background-size: 107px 101px; }
+#fixed .logo a { transition: all .2s ease-in-out; display: block; width: 107px; height: 101px; background-image: url("../images/main/logo2.png"); background-size: 107px 101px; }
+#fixed .logo a.on { opacity: 0; }
 
 #wrap {  }
 
@@ -18,7 +19,7 @@ body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #1d0
 .mega_side { width: 17vw; height: 17vh; padding: 5% 0 0 2%; }
 .mega_side img { width: 100%; }
 
-.name { position: absolute;  animation: floatTxt 5s infinite; -moz-animation: floatTxt 5s infinite; -webkit-animation: floatTxt 5s infinite; -o-animation: floatTxt 5s infinite; -webkit-animation-direction: alternate; animation-direction: alternate; font-family: hanna; font-size: 18.88vw; width: 100%; left: 21.5%; top: 10.8%; }
+.name { position: absolute;  animation: floatTxt 5s infinite; -moz-animation: floatTxt 5s infinite; -webkit-animation: floatTxt 5s infinite; -o-animation: floatTxt 5s infinite; -webkit-animation-direction: alternate; animation-direction: alternate; font-family: hanna; font-size: 18.88vw; width: 100%; left: 21.5%; top: 7.5%; }
 
 @keyframes floatTxt {
     0% {
@@ -58,7 +59,7 @@ body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #1d0
 	}
 }
 
-.txt { margin: 17% 0 0 30%; font-size: 1.3vw; }
+.txt { margin: 16% 0 0 30%; font-size: 1.3vw; }
 .txt strong { font-size: 1.6vw; font-weight: 500; }
 .txt p, .txt a { font-weight: 300; }
 
@@ -131,7 +132,7 @@ body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #1d0
 .chap_txt { transition: all .5s ease-in-out; margin-left: -700px; width: 100%; font-size: 1rem; font-weight: 400; }
 .chap_txt.on { margin-left: 0; }
 .chap_txt h4 { position: relative; letter-spacing: 5px; font-family: hanna; font-size: 7.4vw; }
-.chap_txt h4:after { content: ""; position: absolute; left: 17%; bottom: 10%; width: 2.8%; height: 16.3%; border-radius: 50%; background: #29a3a4;}
+.chap_txt h4:after { content: ""; position: absolute; left: 17%; bottom: 10%; width: 2.8%; height: 16.3%; border-radius: 50%; background: #29a3a4; }
 .chap_1 p { padding: 10% 0; font-size: 1.1vw; word-break: keep-all; line-height: 43px; }
 
 
@@ -205,7 +206,15 @@ body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #1d0
 /* .mobile img { width: 100%; } */
 .image img { width: 100%; }
 
-
+/* chap2 */
+#chap2 { transition: all .5s ease-in-out; opacity: 0; }
+#chap2.on { opacity: 1; }
+.chap_txt2 { margin-top: 7%;}
+.chap_txt2 h4 { position: relative; letter-spacing: 5px; font-family: hanna; font-size: 7.4vw; }
+.chap_txt2 h4:after { content: ""; position: absolute; left: 25%; bottom: 10%; width: 2.6%; height: 30%; border-radius: 50%; background: #29a3a4; }
+h5 { position: relative; font-size: 2vw; font-weight: 400; color: #1d0242; padding: 3% 3% 3% 0; }
+h5:after { content: ""; position: absolute; left: 15%; top: 50%; width: 78.5vw; height: 1px; background: #29a3a4; }
+pre { height: 50vh; }
 
 
 

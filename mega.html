@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title> CoDingHyunDing - megabox </title>
+    <link href="css/prism.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/mega.css">
 
@@ -20,6 +22,8 @@
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/mega.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/prettify.js"></script>
 </head>
 
 <body>
@@ -69,7 +73,7 @@
                 <div class="chap_1">
                     <div class="chap_txt">
                         <span>chapter - 1</span>
-                        <h4>Respon<br>sive</h4>
+                        <h4>respon<br>sive</h4>
                     </div>
                     <div class="txt_box1">
                         <p>반응형 사이트로 구현하여, @media를 이용해<br>창 사이즈를 조절할 때마다 자동으로 사이트가<br> 비율에 맞게 변화합니다. (1920, 1200, 1024,
@@ -85,20 +89,124 @@
                     <div class="image"></div>
                 </div>
             </div>
-    </div>
-    <footer id="footer">
-        <ul class="sns_list clearfix">
-            <li class="sns1"><a href="https://github.com/limhyunji1/hy" target="_blank"></a></li>
-            <li class="sns2"><a href="https://codepen.io/hyunjizzang" target="_blank"></a></li>
-            <li class="sns3"><a href="index.html" target="_blank"></a></li>
-            <li class="sns4"><a href="https://lake0989.tistory.com/" target="_blank"></a></li>
-            <li class="sns5"><a href="http://lake0989.dothome.co.kr/" target="_blank"></a></li>
-        </ul>
-        <address>lake0989@naver.com</address>
-        <p>HYUNJI’S PORTFOLIO 2019</p>
-    </footer>
+            
+            <div id="chap2">
+                <div class="chap_txt2">
+                    <span>chapter - 2</span>
+                    <h4>coding</h4>
+                </div>
+                <div class="txt_box2">
+                    <h5>media query</h5>
+                    <pre><code class="language-css line-numbers">@media (max-width: 1290px) {
+.container { width: 100%; }
+}
+                            
+@media (max-width: 1200px) {
+#mNav { display: block; }
+.header .menu { display: none; }
+.header .logo .lo2 { display: none; }
+.header .logo .lo1 { margin: 12px 15px 9px 0; }
+}
+                     
+@media (max-width: 1024px) {
+.help .help_box1 { float: left; width: 49%; margin-right: 2%; }
+.help .help_box2 { float: left; width: 49%; margin-right: 0%; }
+.help .help_box3 { float: left; width: 100%; margin-top: 2%; }
+.help .help_box3 h3 { display: none; }
+.help .help_box3 .service { height: auto; }
+.service li { width: 25%; height: auto; }
+.service li:nth-child(1) { background: url(../img/i1.jpg) no-repeat top 20px center 80px;border-bottom: 0; border-right: 0; }
+.service li:nth-child(2) { background: url(../img/i2.jpg) no-repeat top 20px center 80px;border-bottom: 0; }
+.service li:nth-child(3) { background: url(../img/i3.jpg) no-repeat top 20px center 80px;border-right: 0;}
+.service li:nth-child(4) { background: url(../img/i4.jpg) no-repeat top 20px center 80px; }
+.service li a { padding-top: 100px; padding-bottom: 10px; }
+}
+                            
+@media (max-width: 900px) {
+#movie { background: #d9d7e0; padding: 16px; }
+#movie .row { background: #fff; padding: 32px; }
+.movie { padding: 0; }
+.movie .ir_so { position: static; width: auto; height: auto; overflow: visibletext-indent: 0; line-height: normal; font-size: 18px; margin-bottom: 13px; font-weight700; }
+.movie .movie_title { width: auto; margin-bottom: 20px; }
+.movie .movie_title li { width: auto; border: 0; margin-left: 0; }	
+.movie .movie_title li a { padding: 0; font-size: 14px; color: #999; margin-right: 20px font-weight: 500; }
+.movie .movie_title li.active a { background: none; color: #333; border-bottom: solid #333; }
+#event { background: #d9d7e0; padding: 0 16px 16px 16px; }
+#event .row { background: #fff; padding: 32px; }
+.event { padding: 0; }
+.event h2 { font-size: 18px; margin-bottom: 13px; }
+.event .event_box .event_left { width: 100%; margin-right: 0; }
+.event .event_box .event_right { display: none; }
+.opening { padding: 40px 0; }
+.opening .open { width: 200px; }
+.opening .open_num { width: 130px; }
+.opening p { font-size: 18px; }
+.opening .open_box { display: none; }
+#new { background: #d9d7e0; padding: 0 16px 16px 16px; }
+#new .row { background: #fff; padding: 32px; }
+.new { padding: 0; }
+.new h2 { font-size: 18px; margin-bottom: 13px; }
+.new .new_left { margin-right: 0; height: 280px; }
+.new .new_left .play { width: 80px; height: 80px;  }
+.new .new_right { display: none; }
+#help { background: #d9d7e0; padding: 0 16px 16px 16px; }
+#help .row { background: #fff; padding: 32px; }
+.help { padding-bottom: 0; }
+.help h3 { font-size: 18px; margin-bottom: 13px; }
+.help .help_box1 { width: 100%; margin-right: 0; }
+.help .help_box2 { width: 100%; margin-top: 2%; }
+.help .help_box3 { width: 100%; margin-top: 2%; }
+.help .help_box3 h3 { display: block; }
+#footer { padding: 0; }
+.footer_sns { position: static; text-align: center; background: #352c2cpadding-bottom: 15px; }
+.footer_sns .tel { display: none; }
+.footer_info { text-align: center; padding: 5% 0; }
+.footer_info h2 img { margin: 0 auto; }
+.footer_info li { white-space: nowrap; }
+.footer_info address br { display: none; }
+}
 
-    <!-- TOP 버튼 -->
+@media (max-width: 600px) {
+.row { padding: 0 16px; }
+#header { position: fixed; left: 0; top: 0; width: 100%; z-index: 10000; background#fff; }
+#mNav { top: 1px; right: 8px; }
+.header .logo { width: 130px; }
+.slider { margin-top: 50px; }
+.banner .btn { display: none; }
+#movie { padding: 8px 8px 0 8px; }
+#movie .row { padding: 16px; }
+#event { padding: 8px; }
+#event .row { padding: 16px; }
+#new { padding: 8px; }
+#new .row { padding: 16px; }
+#help { padding: 0px 8px 8px 8px; }
+#help .row { padding: 16px; }
+.help h3 { padding-top: 20px; }
+.help > article:nth-child(1) h3 { padding-top: 0; }
+.service li:nth-child(1) { background: url(../img/i1.jpg) no-repeat top 20px center 60px;border-bottom: 0; border-right: 0; }
+.service li:nth-child(2) { background: url(../img/i2.jpg) no-repeat top 20px center 60px;border-bottom: 0; }
+.service li:nth-child(3) { background: url(../img/i3.jpg) no-repeat top 20px center 60px;border-right: 0;}
+.service li:nth-child(4) { background: url(../img/i4.jpg) no-repeat top 20px center 60px; }
+.service li a { font-size: 14px; padding-top: 80px; }
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+        <footer id="footer">
+            <ul class="sns_list clearfix">
+                <li class="sns1"><a href="https://github.com/limhyunji1/hy" target="_blank"></a></li>
+                <li class="sns2"><a href="https://codepen.io/hyunjizzang" target="_blank"></a></li>
+                <li class="sns3"><a href="index.html" target="_blank"></a></li>
+                <li class="sns4"><a href="https://lake0989.tistory.com/" target="_blank"></a></li>
+                <li class="sns5"><a href="http://lake0989.dothome.co.kr/" target="_blank"></a></li>
+            </ul>
+            <address>lake0989@naver.com</address>
+            <p>HYUNJI’S PORTFOLIO 2019</p>
+        </footer>
+
+        
+        <!-- TOP 버튼 -->
     <a href="#" class="btn_top">TOP</a>
 </body>
 

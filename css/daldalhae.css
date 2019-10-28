@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #3a3a3a; }
-
-#fixed .logo a { display: block; width: 107px; height: 101px; background-image: url("../images/main/logo2.png"); background-size: 107px 101px; }
+#fixed .logo a { transition: all .2s ease-in-out; display: block; width: 107px; height: 101px; background-image: url("../images/main/logo2.png"); background-size: 107px 101px; }
+#fixed .logo a.on { opacity: 0; }
 
 #wrap { margin: 0 60px; }
 
@@ -22,7 +22,7 @@ body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #3a3
 .bgImg { animation: floatImg 7s infinite; position: absolute; top: -1%; right: -70px;}
 .bgImg img { width: 34vw; }
 
-.name { position: absolute;  animation: floatTxt 5s infinite; -moz-animation: floatTxt 5s infinite; -webkit-animation: floatTxt 5s infinite; -o-animation: floatTxt 5s infinite; -webkit-animation-direction: alternate; animation-direction: alternate; font-family: hanna; font-size: 18.88vw; width: 100%; left: 21.5%; top: 4.2%; }
+.name { position: absolute;  animation: floatTxt 5s infinite; -moz-animation: floatTxt 5s infinite; -webkit-animation: floatTxt 5s infinite; -o-animation: floatTxt 5s infinite; -webkit-animation-direction: alternate; animation-direction: alternate; font-family: hanna; font-size: 18.88vw; width: 100%; left: 21.5%; top: 3.7%; }
 .name h3 { color: #e04c60; }
 .name span { color: #fbf4bd; } 
 
@@ -64,7 +64,7 @@ body { overflow-x: hidden; background: #ffb8a9; font-family: ScoreD; color: #3a3
 	}
 }
 
-.txt { margin: 14% 0 0 30%; color: #e04c60; font-size: 1.3vw; }
+.txt { margin: 13.5% 0 0 30%; color: #e04c60; font-size: 1.3vw; }
 .txt strong { font-size: 1.6vw; font-weight: 500; }
 .txt p, .txt a { font-weight: 300; }
 

@@ -101,9 +101,9 @@ body { background: #ffb8a9; overflow: hidden; font-family: Constantia; color: #1
 }
 
 /* svg 리본 */
-#svgLine{ position: fixed; width: 100%;height: 100vh;overflow: hidden;}
-.dark{fill:#7524b3;stroke:#7524b3;stroke-miterlimit:10;}
-.white{fill:#B168E8;stroke:#B168E8;stroke-miterlimit:10;}
+#svgLine { position: fixed; transform: translate(10%, 0%); width: 100%; height: 100vh; overflow: hidden; }
+.dark { fill:#7524b3; stroke:#7524b3; stroke-miterlimit: 10; }
+.white { fill:#B168E8; stroke:#B168E8; stroke-miterlimit: 10; }
 
 
 /* section */

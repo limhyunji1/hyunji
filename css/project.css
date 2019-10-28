@@ -29,7 +29,7 @@ h2:hover { color: #ffb8a9; text-shadow: 2px  2px 0  #1d0242, -1.5px -2px 0 #1d02
 
 ul.project_list { padding-bottom: 150px; padding-top: 300px; text-align: center; font-size: 9.375vw; }
 ul.project_list li { transition: all .2s ease-in-out; position: relative; z-index: 1; }
-ul.project_list li + li { margin-top: 10%; }
+ul.project_list li + li { margin-top: 11%; }
 ul.project_list li a.one { color: #fff; text-shadow: 2px  2px 0  #1d0242, -1.5px -2px 0 #1d0242, 2px -2px 0 #1d0242, -1.5px 2px 0 #1d0242, 2px  2px 0 #1d0242; }
 ul.project_list li a { transition: all .2s ease-in-out; }
 
@@ -42,8 +42,7 @@ ul.project_list li:first-child a .arrow { left: 81%; }
 
 ul.project_list .list1 { animation: float1 7s ease-in-out infinite; }
 ul.project_list .list2 { animation: float1 5s ease-in-out infinite; }
-ul.project_list .list3 { animation: float1 9s ease-in-out infinite; }
-ul.project_list .list4 { animation: float1 6s ease-in-out infinite; }
+ul.project_list .list3 { margin-bottom: 3.8%; animation: float1 9s ease-in-out infinite; }
 
 
 @keyframes float1 {

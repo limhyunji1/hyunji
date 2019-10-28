@@ -34,6 +34,10 @@ $(document).ready(function (){
         if (scrollT > 500) $('.btn_top').addClass('view');
         else $('.btn_top').removeClass('view');
 
+        var logoPos = $('.txt').offset().top - 600;
+         if (scrollT > logoPos) $('.logo a').addClass('on');
+         else $('.logo a').removeClass('on');
+
         var chap1Pos = $('#chap1 .chap_txt').offset().top - 600;
          if (scrollT > chap1Pos) $('#chap1 .chap_txt').addClass('on');
          else $('#chap1 .chap_txt').removeClass('on');
@@ -45,6 +49,10 @@ $(document).ready(function (){
         var mobilePos = $('#chap1 .txt_box1').offset().top - 600;
          if (scrollT > mobilePos) $('#chap1 .mobile').addClass('on');
          else $('#chap1 .mobile').removeClass('on');
+
+        var chap2Pos = $('#chap2').offset().top - 600;
+         if (scrollT > chap2Pos) $('#chap2').addClass('on');
+         else $('#chap2').removeClass('on');
 
 
     });
